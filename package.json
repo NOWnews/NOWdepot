@@ -1,0 +1,22 @@
+{
+  "name": "nowdepot",
+  "version": "1.0.0",
+  "description": "活動頁、廣告頁...等等，記錄這些靜態頁面的地方",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOWnews/NOWdepot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NOWnews/NOWdepot/issues"
+  },
+  "homepage": "https://github.com/NOWnews/NOWdepot#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
