@@ -1,110 +1,185 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-    /* 基本設定 */
-    * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    body {
-        margin: 0;
-        font-family: 微軟正黑體, 'Microsoft JhengHei', 蘋果儷中黑, 'Apple LiGothic Medium', sans-serif;
-        overflow: hidden;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/muicss/0.9.5/css/mui.min.css');
+        .step-box {
+            width: 640px;
+            height: 250px;
+            background-image: url(http://legacy.nownews.com/ad2004/161006-114459-6823p.gif);
+            overflow: hidden;
+            position: relative;
+            display: none;
+        }
+        .step1 { padding-top: 20px; }
+        .left-img {
+            width: 25%;
+            height: 100%;
+        }
+        .right-text {
+            width: 70%;
+            height: 100%;
+        }
+        strong { color: #FF3333; }
+        .right-text .mui-radio {
+            display: inline-block;
+            padding-left: 20px;
+            margin: 0;
+        }
+        .right-text h3 {
+            margin-bottom: 7px;
+        }
+        .statement {
+            position: relative;
+            margin-left: -25px;
+            font-size: 12px;
+            display: inline-block;
+            transform: scale(0.9);
+            -moz-transform: scale(0.9);
+             -webkit-transform: scale(0.9);
+            -o-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+        }
+        .form-box {
+            background: #ddd;
+            margin: 10px 10px 0;
+            padding: 5px 5px 10px;
+        }
+        .other { padding: 3px; }
+        .other > label{ padding-left: 0; }
+        .other input[type="text"],
+        .other input[type="tel"],
+        .other input[type="email"]{
+            width: 140px;
+        }
+        .bg-yellow {
+            background-color: #FFFFA3;
+            color: #c61b1f;
+            font-weight: bold;
+            padding: 2px 10px;
+            font-size: 13px;
+            margin: 0 5px;
+        }
+        .text-center { text-align:center; }
+        .pull-right { float:right; }
+        .pull-left { float:left; }
+        .clear { clear:both; }
+        .step1 { display: block;}
+    </style>
 
-    }
-    .box {
-        width: 640px;
-        height: 250px;
-        border: 1px solid #000;
-    }
-    .pull-left {
-        float: left;
-    }
-    .pull-right {
-        float: right;
-    }
-    .clearfix {
-        clear: both;
-    }
-    .box > .left-box {
-        background: red;
-        width: 150px;
-        height: 100%;
-    }
-    .box > .right-box {
-        background: blue;
-        width: 488px;
-        height: 100%;
-    }
-    img {
-    }
-    .teacher-img {
-        max-width: 90%
-    }
-    .red-envelopes-img {
-        
-    }
-</style>
-<meta charset="UTF-8">
 </head>
+
 <body>
-    <div class="box start-box">
-        <div class="left-box pull-left">
-            <img src="img1.png">
+    <div class="step-box step1">
+        <div class="pull-left text-center left-img">
+            <img src="img1_burned.png">
         </div>
-        <div class="right-box pull-right">
-            <img src="img2.png">
+        <div class="pull-left right-text">
+            <div class="pull-left">
+                <h2>金雞報喜，基金教母送你<br><strong>開運酉 (ㄧㄡˇ) 福紅包袋！</strong><br>(共30份)</h2>
+            </div>
+            <div class="text-center">
+                <img src="img2.png">
+            </div>
+            <br>
+            <p style="font-size: 13px; margin:0;">提示：只要觀看下列影片回答問題，並分享至FB，就有機會獲得開運紅包袋。</p>
+            <div class='text-center'>
+                <button class="mui-btn mui-btn--danger">下一步 >> </button>
+            </div>
         </div>
-    </div>
-    <div class="box">
-        <div class="left-box pull-left">
-            <img src="img1.png">
-        </div>
-        <div class="right-box pull-right">
-            <img src="img2.png">
-        </div>
-    </div>
-    <div class="box">
-        <div class="left-box pull-left">
-            <img src="img1.png">
-        </div>
-        <div class="right-box pull-right">
-            <img src="img2.png">
-        </div>
+        <div class="clear"></div>
     </div>
 
-    <div class="box topic-box">
-        <h2 class="title">Q: 影片中蕭老師運用定時定額買房，總共花了幾年還清房貸？</h2>
-        <div class="body">
-            <div class="select-box" style="margin-top: 5px; color:#cc0000;">
+    <div class="step-box step2">
+        <div class="pull-left text-center left-img">
+            <br>
+            <img src="img1_burned.png">
+        </div>
+        <div class="pull-left right-text">
+            <div class="text-center" style="padding-top:6px;">
+                <iframe width="380" height="170" src="https://www.youtube.com/embed/v9OMDcmEneI?list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="text-center">
+                <button style="margin:3px;" class="mui-btn mui-btn--danger">我看完了，準備接受挑戰 >> </button>
+            </div>
+            <a href="https://www.youtube.com/watch?v=v9OMDcmEneI&list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8&index=4">【基金教母私房筆記 X 復華金管家】蕭碧燕老師教你第三代定時定額！</a>
+        </div>
+        <div class="clear"></div>
+    </div>
 
+    <div class="step-box step3">
+        <div class="pull-left text-center left-img">
+            <br>
+            <img src="img1_burned.png">
+        </div>
+        <div class="pull-left right-text">
+            <h3>Q1. 定時定額的成敗關鍵是甚麼？</h3>
+            <div class="mui-radio">
                 <label>
-                    <input type="radio" name="game" value="100">
-                    <span>5 年 </span>
-                </label>
-                <label>
-                    <input type="radio" name="game" value="0">
-                    <span>10 年 </span>
+                <input type="radio" name="qa" id="qa1" value="1">
+                停利+停損
                 </label>
             </div>
-
-            <form class="body" action="" method="post">
+            <div class="mui-radio">
+                <label>
+                <input type="radio" name="qa" id="qa2" value="2">
+                停利不停扣
+                </label>
+            </div>
+            <div class="mui-radio">
+                <label>
+                <input type="radio" name="qa" id="qa3" value="3">
+                停損不停利
+                </label>
+            </div>
+            <h3>Q2. 復華金利High的三大利High您最喜歡哪一個？</h3>
+            <div class="mui-radio">
+                <label>
+                <input type="radio" name="qb" id="qb1" value="1">
+                自動停利
+                </label>
+            </div>
+            <div class="mui-radio">
+                <label>
+                <input type="radio" name="qb" id="qb2" value="2">
+                高檔出場
+                </label>
+            </div>
+            <div class="mui-radio">
+                <label>
+                <input type="radio" name="qb" id="qb3" value="3">
+                低檔自動進場
+                </label>
+            </div>
+            <div class="text-center" style="padding-top:20px;">
+                <button class="mui-btn mui-btn--danger">送出答案 >> </button>
+                <img style="position: absolute;right: 30px;bottom: 15px;width: 110px;" src="img2.png">
+            </div>
+        </div>
+    </div>
+    <div class="step-box step4">
+        <h2 id="ans" class="text-center" style="margin: 10px auto 0;">Ans:</h2>
+        <form class="form-box" action="" method="post">
+            <div class="other">
                 <label>
                     <span class="essential">姓名 :</span>
                     <input id="name" type="text" name="name" placeholder="你的姓名" class="required">
                 </label>
                 <label>
                     <span class="essential">手機 :</span>
-                    <input id="mobile" type="tel" name="mobile" placeholder="手機號碼(共10位數)" class="required">
+                    <input id="phone" type="tel" name="phone" placeholder="手機號碼(共10位數)" class="required">
                 </label>
                 <label>
                     <span class="essential">Email :</span>
                     <input id="email" type="email" name="email" placeholder="你的信箱" class="required">
                 </label>
-                <div class="other">
-                    <span class="essential">年齡區間 :</span>
+            </div>
+            <div class="other">
+                <label>年齡區間 :
                     <select id="age" name="age">
                         <option value="">選擇年齡區間</option>
                         <option value="20以下">20以下</option>
@@ -113,7 +188,34 @@
                         <option value="40~49">40~49</option>
                         <option value="50以上">50以上</option>
                     </select>
-                    <span class="essential" style="width: 45px;">性別 :</span>
+                </label>
+                <label>居住地 :
+                    <select name="address">
+                        <option value="">--請選擇--</option>
+                        <option value="台北市">台北市</option>
+                        <option value="基隆市">基隆市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="宜蘭縣">宜蘭縣</option>
+                        <option value="新竹縣市">新竹縣市</option>
+                        <option value="桃園縣">桃園縣</option>
+                        <option value="苗栗縣">苗栗縣</option>
+                        <option value="台中市">台中市</option>
+                        <option value="彰化縣">彰化縣</option>
+                        <option value="南投縣">南投縣</option>
+                        <option value="嘉義縣">嘉義縣</option>
+                        <option value="雲林縣">雲林縣</option>
+                        <option value="台南市">台南市</option>
+                        <option value="高雄市">高雄市</option>
+                        <option value="澎湖縣">澎湖縣</option>
+                        <option value="屏東縣">屏東縣</option>
+                        <option value="台東縣">台東縣</option>
+                        <option value="花蓮縣">花蓮縣</option>
+                        <option value="金門縣">金門縣</option>
+                        <option value="連江縣">連江縣</option>
+                    </select>
+                </label>
+                <span class="essential" style="width: 45px;padding-left: 7px;">
+                    性別 :
                     <label>
                         <input type="radio" name="gender" value="boy">
                         <span>男</span>
@@ -122,169 +224,93 @@
                         <input type="radio" name="gender" value="girl">
                         <span>女</span>
                     </label>
-                </div>
-                <br>
-                <label class="statement">
-                    <input type="checkbox" name="statement" checked> 本人已詳閱
-                    <a href="http://www.fhtrust.com.tw/announce/personal_announce.html" target="_blank">個資蒐集聲明</a>，並同意復華投信得蒐集、處理、利用上述本人所填寫之個人資料，以便取得投資理財相關服務。 (除非事先經過您的同意或依相關法律規定，復華投信不會將您的個人資料提供給第三人，或移作其他目的使用)
-                </label>
-                <div class="info clearfix bg-yellow">
-                    <span class="red">※請填寫完整資料，NOWnews將於10/28(五)抽出基金教母關鍵筆記(共20本)，並通知得獎者。</span>
-                </div>
-            </form>
+                </span>
+            </div>
+            <label class="statement">
+                <input type="checkbox" name="statement" checked> 本人已詳閱
+                <a href="http://www.fhtrust.com.tw/announce/personal_announce.html" target="_blank">個資蒐集聲明</a>，並同意復華投信得蒐集、處理、利用上述本人所填寫之個人資料，以便取得投資理財相關服務。 (除非事先經過您的同意或依相關法律規定，復華投信不會將您的個人資料提供給第三人，或移作其他目的使用)
+            </label>
+            <div class="info clearfix bg-yellow">
+                <span class="red">※填寫完整資料，即有機會獲得限量開運紅包袋一份，本活動(活動期間)由NOWnews每周二抽出15位得獎者(共30份) ，並統一於12/23日前寄出。</span>
+            </div>
+        </form>
+        <div class="text-center">
+            <img src="img2.png" style="height: 36px;padding-right: 10px;">
+            <button class="mui-btn mui-btn--danger">送出，我要抽開運紅包袋 >> </button>
         </div>
-        <p class="btn send-btn question-btn move">送出答案，我要抽獎》</p>
     </div>
-
-    <div class="box result-box">
-        <div class="body"></div>
-        <div class="endingcut">
-            <div class="gotovideo"><a href="https://www.youtube.com/watch?v=0JxVfLlgiGQ&list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8&index=2" target="_blank">再看一次影片》</a></div>
-            <div class="gotovideo"><a href="https://www.youtube.com/watch?v=oTZllmK8h5M&list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8" target="_blank">看更多蕭老師影片》</a></div>
+    <div class="step-box step5">
+        <div class="pull-left text-center left-img">
+            <br>
+            <img src="img1_burned.png">
+        </div>
+        <div class="pull-left right-text" style="padding-top: 40px;">
+            <h2>您送出的資料已收到，祝您幸運中獎！</h2>
+            <a href="http://www.fhtrust.com.tw/epaper/2016RSP_Hsiao/index.html?cid=16NNE">
+                <h3>看更多蕭老師投資撇步</h3>
+                <img style="position: relative;right: -250px;top: -50px;" src="img2.png">
+            </a>
         </div>
     </div>
 </body>
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>
 
-    // $(function() {
-    //     // library
-    //     $.fn.serializeFormJSON = function () {
-    //         var o = {};
-    //         var a = this.serializeArray();
-    //         $.each(a, function () {
-    //             if (o[this.name]) {
-    //                 if (!o[this.name].push) {
-    //                     o[this.name] = [o[this.name]];
-    //                 }
-    //                 o[this.name].push(this.value || '');
-    //             } else {
-    //                 o[this.name] = this.value || '';
-    //             }
-    //         });
-    //         return o;
-    //     };
-    //
-    //     // 變數
-    //     var questionList = [
-    //         " 下列關於基金定時定額的投資觀念何者正確？",
-    //     ];
-    //     var resultList = [
-    //         '答對囉！<br>想了解更多投資撇步？ - ',
-    //         '哎呀~答錯了！ - 蕭老師只花了「5年」就辦到囉～'
-    //     ]
-    //     var page = 1;
-    //     var $box = $('.topic-box')
-    //     var $box1 = $('.result-box');
-    //     var $box2 = $('.form-box');
-    //     var $box3 = $('.finish-box');
-    //     var scoreObj = [];
-    //     var totalScore = 0;
-    //
-    //     $box.hide();
-    //     $box1.hide();
-    //     $box2.hide();
-    //     $box3.hide();
-    //     $('.start-box .btn').on('click', function(){
-    //         $('.start-box').fadeOut(function() {
-    //             var question = questionList[0].split(' ')[0]
-    //             var questionSub = questionList[0].split(' ')[1]
-    //             var questionHtml = '<p class="blod">' + question + ' </p><p>' + questionSub + '</p>';
-    //
-    //             $('.question-box').html(questionHtml);
-    //             $box.fadeIn();
-    //         });
-    //     });
-    //
-    //     $('.question-btn').text('送出答案，我要抽獎 》').on('click', function() {
-    //         var $checkedInput = $('input:checked');
-    //         var score = parseInt($checkedInput.val(), 10);
-    //         scoreObj[page] = isNaN(score) ? 0 : score;
-    //         // $checkedInput.prop('checked', false);
-    //
-    //         var data = $('form').serializeFormJSON();
-    //         var statement = $('input[name="statement"]').prop('checked');
-    //
-    //         if (!data.name){
-    //             return alert('請填姓名');
-    //         }
-    //         if (!data.mobile){
-    //             return alert('請填手機');
-    //         }
-    //         if (data.mobile.search(/^09[0-9]{8}$/)==-1){
-    //             return alert('手機資料有誤');
-    //         }
-    //         if (!data.email){
-    //             return alert('請填信箱');
-    //         }
-    //         if (data.email.search(/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/)==-1){
-    //             return alert('信箱資料有誤');
-    //         }
-    //         if (!data.age){
-    //             return alert('請填年齡區間');
-    //         }
-    //         if (!data.gender){
-    //             return alert('請填性別');
-    //         }
-    //         if (!statement){
-    //             return alert('請詳閱個資聲明');
-    //         }
-    //
-    //         data.score = totalScore;
-    //
-    //         $.ajax({
-    //             url: "http://api.adm4000.nownews.com:3001/fund",
-    //             type: 'POST',
-    //             crossDomain: true,
-    //             data: data,
-    //             success: function(data){
-    //                 console.log('susscs',data)
-    //                 totalScore = 0;
-    //                 scoreObj.forEach(function(value, index) {
-    //                     totalScore = totalScore + value;
-    //                 });
-    //                 var result = totalScore >= 100 ? 0 : 1;
-    //                 var resultText = resultList[result].split(' - ')[0];
-    //                 var resultTextSub = resultList[result].split(' - ')[1];
-    //
-    //                 $box.fadeOut(function() {
-    //                     var resultHtml = '<div class="result-text"><p>' + resultText + '<br>' + resultTextSub + '</p>';
-    //                     $box1.find('.body').html(resultHtml);
-    //                     $box1.fadeIn();
-    //                 });
-    //                 $box.fadeOut(function() {
-    //                     $('.question-box').html(questionHtml);
-    //                     $box.fadeIn();
-    //                 });
-    //                 page++;
-    //                 return;
-    //             },
-    //             error: function(err){
-    //                 console.log('error', err)
-    //             }
-    //         });
-    //
-    //     });
-    //
-    //     $('.write-info-btn').on('click', function(){
-    //         $box1.fadeOut(function() {
-    //             $box2.fadeIn();
-    //         });
-    //     });
-    //
-    //
-    //     // 移動的按鈕
-    //     var loop = function (operation) {
-    //         $('.move').animate ({
-    //             left: operation + '=10px',
-    //         }, 500, 'linear', function() {
-    //             operation = operation == '+' ? '-' : '+';
-    //             loop(operation);
-    //         });
-    //     };
-    //     loop('+');
-    // });
+<script>
+$(function(){
+    function move ($now, $next) {
+        $now.hide();
+        $next.fadeIn(1000);
+    }
+    var data = {};
+    $('.step-box').each(function(i, e){
+        var index = i+1;
+
+        $('.step'+ index +' button.mui-btn').click(function(e){
+            if (index === 3) {
+                data.qa = $('input[name="qa"]:checked').val();
+                data.qb = $('input[name="qb"]:checked').val();
+                if (!data.qa) return alert('請填Q1答案');
+                if (!data.qb) return alert('請填Q2答案');
+                $('#ans').text('Ans:   排除人性干擾，停利不停扣才是正確的唷！');
+                if (data.qa == 2) {
+                    $('#ans').text('Ans:   恭喜你！你的定時定額投資觀念很正確唷！');
+                }
+            }
+            if (index === 4) {
+                // 確認填寫欄位
+                data.name = $('input[name="name"]').val();
+                if (!data.name) return alert('請填姓名');
+                data.phone = $('input[name="phone"]').val();
+                if (!data.phone) return alert('請填電話');
+                data.email = $('input[name="email"]').val();
+                if (!data.email) return alert('請填電子郵件');
+                data.age = $('select[name="age"] option:selected').val();
+                if (!data.age) return alert('請填年齡區間');
+                data.address = $('select[name="address"] option:selected').val();
+                if (!data.address) return alert('請填居住地');
+                data.gender = $('input[name="gender"]:checked').val();
+                if (!data.gender) return alert('請填性別');
+                data.statement = $('input[name="statement"]:checked').val();
+                if (!data.statement) return alert('請詳閱個資聲明');
+
+                $.ajax({
+                    url: "",
+                    // url: "http://api.adm4000.nownews.com:3001/fund",
+                    type: 'POST',
+                    crossDomain: true,
+                    data: data,
+                    success: function(data){
+                        console.log(data)
+                    },
+                    error: function(err){
+                        console.log('error', err)
+                    }
+                });
+            }
+            move( $('.step'+ index), $('.step'+ (index+1)) );
+        })
+    });
+});
 </script>
 
 </html>

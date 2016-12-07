@@ -4,7 +4,7 @@
   "description": "活動頁、廣告頁...等等，記錄這些靜態頁面的地方",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
