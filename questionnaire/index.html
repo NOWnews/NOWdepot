@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* 基本設定 */
+    * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        font-family: 微軟正黑體, 'Microsoft JhengHei', 蘋果儷中黑, 'Apple LiGothic Medium', sans-serif;
+        overflow: hidden;
+
+    }
+    .box {
+        width: 640px;
+        height: 250px;
+        border: 1px solid #000;
+    }
+    .pull-left {
+        float: left;
+    }
+    .pull-right {
+        float: right;
+    }
+    .clearfix {
+        clear: both;
+    }
+    .box > .left-box {
+        background: red;
+        width: 150px;
+        height: 100%;
+    }
+    .box > .right-box {
+        background: blue;
+        width: 488px;
+        height: 100%;
+    }
+    img {
+    }
+    .teacher-img {
+        max-width: 90%
+    }
+    .red-envelopes-img {
+        
+    }
+</style>
+<meta charset="UTF-8">
+</head>
+<body>
+    <div class="box start-box">
+        <div class="left-box pull-left">
+            <img src="img1.png">
+        </div>
+        <div class="right-box pull-right">
+            <img src="img2.png">
+        </div>
+    </div>
+    <div class="box">
+        <div class="left-box pull-left">
+            <img src="img1.png">
+        </div>
+        <div class="right-box pull-right">
+            <img src="img2.png">
+        </div>
+    </div>
+    <div class="box">
+        <div class="left-box pull-left">
+            <img src="img1.png">
+        </div>
+        <div class="right-box pull-right">
+            <img src="img2.png">
+        </div>
+    </div>
+
+    <div class="box topic-box">
+        <h2 class="title">Q: 影片中蕭老師運用定時定額買房，總共花了幾年還清房貸？</h2>
+        <div class="body">
+            <div class="select-box" style="margin-top: 5px; color:#cc0000;">
+
+                <label>
+                    <input type="radio" name="game" value="100">
+                    <span>5 年 </span>
+                </label>
+                <label>
+                    <input type="radio" name="game" value="0">
+                    <span>10 年 </span>
+                </label>
+            </div>
+
+            <form class="body" action="" method="post">
+                <label>
+                    <span class="essential">姓名 :</span>
+                    <input id="name" type="text" name="name" placeholder="你的姓名" class="required">
+                </label>
+                <label>
+                    <span class="essential">手機 :</span>
+                    <input id="mobile" type="tel" name="mobile" placeholder="手機號碼(共10位數)" class="required">
+                </label>
+                <label>
+                    <span class="essential">Email :</span>
+                    <input id="email" type="email" name="email" placeholder="你的信箱" class="required">
+                </label>
+                <div class="other">
+                    <span class="essential">年齡區間 :</span>
+                    <select id="age" name="age">
+                        <option value="">選擇年齡區間</option>
+                        <option value="20以下">20以下</option>
+                        <option value="20~29">20~29</option>
+                        <option value="30~39">30~39</option>
+                        <option value="40~49">40~49</option>
+                        <option value="50以上">50以上</option>
+                    </select>
+                    <span class="essential" style="width: 45px;">性別 :</span>
+                    <label>
+                        <input type="radio" name="gender" value="boy">
+                        <span>男</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="girl">
+                        <span>女</span>
+                    </label>
+                </div>
+                <br>
+                <label class="statement">
+                    <input type="checkbox" name="statement" checked> 本人已詳閱
+                    <a href="http://www.fhtrust.com.tw/announce/personal_announce.html" target="_blank">個資蒐集聲明</a>，並同意復華投信得蒐集、處理、利用上述本人所填寫之個人資料，以便取得投資理財相關服務。 (除非事先經過您的同意或依相關法律規定，復華投信不會將您的個人資料提供給第三人，或移作其他目的使用)
+                </label>
+                <div class="info clearfix bg-yellow">
+                    <span class="red">※請填寫完整資料，NOWnews將於10/28(五)抽出基金教母關鍵筆記(共20本)，並通知得獎者。</span>
+                </div>
+            </form>
+        </div>
+        <p class="btn send-btn question-btn move">送出答案，我要抽獎》</p>
+    </div>
+
+    <div class="box result-box">
+        <div class="body"></div>
+        <div class="endingcut">
+            <div class="gotovideo"><a href="https://www.youtube.com/watch?v=0JxVfLlgiGQ&list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8&index=2" target="_blank">再看一次影片》</a></div>
+            <div class="gotovideo"><a href="https://www.youtube.com/watch?v=oTZllmK8h5M&list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8" target="_blank">看更多蕭老師影片》</a></div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+    // $(function() {
+    //     // library
+    //     $.fn.serializeFormJSON = function () {
+    //         var o = {};
+    //         var a = this.serializeArray();
+    //         $.each(a, function () {
+    //             if (o[this.name]) {
+    //                 if (!o[this.name].push) {
+    //                     o[this.name] = [o[this.name]];
+    //                 }
+    //                 o[this.name].push(this.value || '');
+    //             } else {
+    //                 o[this.name] = this.value || '';
+    //             }
+    //         });
+    //         return o;
+    //     };
+    //
+    //     // 變數
+    //     var questionList = [
+    //         " 下列關於基金定時定額的投資觀念何者正確？",
+    //     ];
+    //     var resultList = [
+    //         '答對囉！<br>想了解更多投資撇步？ - ',
+    //         '哎呀~答錯了！ - 蕭老師只花了「5年」就辦到囉～'
+    //     ]
+    //     var page = 1;
+    //     var $box = $('.topic-box')
+    //     var $box1 = $('.result-box');
+    //     var $box2 = $('.form-box');
+    //     var $box3 = $('.finish-box');
+    //     var scoreObj = [];
+    //     var totalScore = 0;
+    //
+    //     $box.hide();
+    //     $box1.hide();
+    //     $box2.hide();
+    //     $box3.hide();
+    //     $('.start-box .btn').on('click', function(){
+    //         $('.start-box').fadeOut(function() {
+    //             var question = questionList[0].split(' ')[0]
+    //             var questionSub = questionList[0].split(' ')[1]
+    //             var questionHtml = '<p class="blod">' + question + ' </p><p>' + questionSub + '</p>';
+    //
+    //             $('.question-box').html(questionHtml);
+    //             $box.fadeIn();
+    //         });
+    //     });
+    //
+    //     $('.question-btn').text('送出答案，我要抽獎 》').on('click', function() {
+    //         var $checkedInput = $('input:checked');
+    //         var score = parseInt($checkedInput.val(), 10);
+    //         scoreObj[page] = isNaN(score) ? 0 : score;
+    //         // $checkedInput.prop('checked', false);
+    //
+    //         var data = $('form').serializeFormJSON();
+    //         var statement = $('input[name="statement"]').prop('checked');
+    //
+    //         if (!data.name){
+    //             return alert('請填姓名');
+    //         }
+    //         if (!data.mobile){
+    //             return alert('請填手機');
+    //         }
+    //         if (data.mobile.search(/^09[0-9]{8}$/)==-1){
+    //             return alert('手機資料有誤');
+    //         }
+    //         if (!data.email){
+    //             return alert('請填信箱');
+    //         }
+    //         if (data.email.search(/^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/)==-1){
+    //             return alert('信箱資料有誤');
+    //         }
+    //         if (!data.age){
+    //             return alert('請填年齡區間');
+    //         }
+    //         if (!data.gender){
+    //             return alert('請填性別');
+    //         }
+    //         if (!statement){
+    //             return alert('請詳閱個資聲明');
+    //         }
+    //
+    //         data.score = totalScore;
+    //
+    //         $.ajax({
+    //             url: "http://api.adm4000.nownews.com:3001/fund",
+    //             type: 'POST',
+    //             crossDomain: true,
+    //             data: data,
+    //             success: function(data){
+    //                 console.log('susscs',data)
+    //                 totalScore = 0;
+    //                 scoreObj.forEach(function(value, index) {
+    //                     totalScore = totalScore + value;
+    //                 });
+    //                 var result = totalScore >= 100 ? 0 : 1;
+    //                 var resultText = resultList[result].split(' - ')[0];
+    //                 var resultTextSub = resultList[result].split(' - ')[1];
+    //
+    //                 $box.fadeOut(function() {
+    //                     var resultHtml = '<div class="result-text"><p>' + resultText + '<br>' + resultTextSub + '</p>';
+    //                     $box1.find('.body').html(resultHtml);
+    //                     $box1.fadeIn();
+    //                 });
+    //                 $box.fadeOut(function() {
+    //                     $('.question-box').html(questionHtml);
+    //                     $box.fadeIn();
+    //                 });
+    //                 page++;
+    //                 return;
+    //             },
+    //             error: function(err){
+    //                 console.log('error', err)
+    //             }
+    //         });
+    //
+    //     });
+    //
+    //     $('.write-info-btn').on('click', function(){
+    //         $box1.fadeOut(function() {
+    //             $box2.fadeIn();
+    //         });
+    //     });
+    //
+    //
+    //     // 移動的按鈕
+    //     var loop = function (operation) {
+    //         $('.move').animate ({
+    //             left: operation + '=10px',
+    //         }, 500, 'linear', function() {
+    //             operation = operation == '+' ? '-' : '+';
+    //             loop(operation);
+    //         });
+    //     };
+    //     loop('+');
+    // });
+</script>
+
+</html>
