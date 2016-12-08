@@ -171,7 +171,7 @@
                 </label>
                 <label>
                     <span class="essential">手機 :</span>
-                    <input id="phone" type="tel" name="phone" placeholder="手機號碼(共10位數)" class="required">
+                    <input id="mobile" type="tel" name="mobile" placeholder="手機號碼(共10位數)" class="required">
                 </label>
                 <label>
                     <span class="essential">Email :</span>
@@ -267,10 +267,10 @@ $(function(){
 
         $('.step'+ index +' button.mui-btn').click(function(e){
             if (index === 3) {
-                data.qa = $('input[name="qa"]:checked').val();
-                data.qb = $('input[name="qb"]:checked').val();
-                if (!data.qa) return alert('請填Q1答案');
-                if (!data.qb) return alert('請填Q2答案');
+                data.questionA = $('input[name="qa"]:checked').val();
+                data.questionB = $('input[name="qb"]:checked').val();
+                if (!data.questionA) return alert('請填Q1答案');
+                if (!data.questionB) return alert('請填Q2答案');
                 $('#ans').text('Ans:   排除人性干擾，停利不停扣才是正確的唷！');
                 if (data.qa == 2) {
                     $('#ans').text('Ans:   恭喜你！你的定時定額投資觀念很正確唷！');
@@ -280,8 +280,8 @@ $(function(){
                 // 確認填寫欄位
                 data.name = $('input[name="name"]').val();
                 if (!data.name) return alert('請填姓名');
-                data.phone = $('input[name="phone"]').val();
-                if (!data.phone) return alert('請填電話');
+                data.mobile = $('input[name="mobile"]').val();
+                if (!data.mobile) return alert('請填電話');
                 data.email = $('input[name="email"]').val();
                 if (!data.email) return alert('請填電子郵件');
                 data.age = $('select[name="age"] option:selected').val();
@@ -293,9 +293,12 @@ $(function(){
                 data.statement = $('input[name="statement"]:checked').val();
                 if (!data.statement) return alert('請詳閱個資聲明');
 
+                // Type 是這個活動的資訊
+                data.type = "復華紅包活動";
+
                 $.ajax({
-                    url: "",
-                    // url: "http://api.adm4000.nownews.com:3001/fund",
+                    // url: "",
+                    url: "http://api.adm4000.nownews.com:3001/fund",
                     type: 'POST',
                     crossDomain: true,
                     data: data,
