@@ -81,13 +81,13 @@
         </div>
         <div class="pull-left right-text">
             <div class="pull-left">
-                <h2>金雞報喜，基金教母送你<br><strong>開運酉 (ㄧㄡˇ) 福紅包袋！</strong><br>(共30份)</h2>
+                <h2>金雞報喜，基金教母送你<br><strong>開運「酉 (ㄧㄡˇ)福」紅包袋！</strong><br>( 共50份 )</h2>
             </div>
             <div class="text-center">
-                <img src="http://legacy.nownews.com/ad2004/161207-180512-1017p.png">
+                <img style="width: 122px;" src="http://legacy.nownews.com/ad2004/161207-180512-1017p.png">
             </div>
             <br>
-            <p style="font-size: 13px; margin:0;">提示：只要觀看下列影片回答問題，並分享至FB，就有機會獲得開運紅包袋。</p>
+            <p style="font-size: 13px; margin:0;">提示：觀看影片回答問題，就有機會獲得開運紅包袋。</p>
             <div class='text-center'>
                 <button class="mui-btn mui-btn--danger">下一步 >> </button>
             </div>
@@ -102,12 +102,12 @@
         </div>
         <div class="pull-left right-text">
             <div class="text-center" style="padding-top:6px;">
-                <iframe width="380" height="170" src="https://www.youtube.com/embed/v9OMDcmEneI?list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8" frameborder="0" allowfullscreen></iframe>
+                <iframe width="380" height="190" src="https://www.youtube.com/embed/v9OMDcmEneI?list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class="text-center">
                 <button style="margin:3px;" class="mui-btn mui-btn--danger">我看完了，準備接受挑戰 >> </button>
             </div>
-            <a target="_blank" href="https://www.youtube.com/watch?v=v9OMDcmEneI&list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8&index=4">【基金教母私房筆記 X 復華金管家】蕭碧燕老師教你第三代定時定額！</a>
+            <!--<a target="_blank" href="https://www.youtube.com/watch?v=v9OMDcmEneI&list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8&index=4">【基金教母私房筆記 X 復華金管家】蕭碧燕老師教你第三代定時定額！</a>-->
         </div>
         <div class="clear"></div>
     </div>
@@ -163,7 +163,7 @@
         </div>
     </div>
     <div class="step-box step4">
-        <h2 id="ans" class="text-center" style="margin: 10px auto 0;">Ans:</h2>
+        <h3 id="ans" class="text-center" style="margin: 10px auto 0;">Ans:</h3>
         <form class="form-box" action="" method="post">
             <div class="other">
                 <label>
@@ -232,7 +232,7 @@
                 <a target="_blank" href="http://www.fhtrust.com.tw/announce/personal_announce.html">個資蒐集聲明</a>，並同意復華投信得蒐集、處理、利用上述本人所填寫之個人資料，以便取得投資理財相關服務。 (除非事先經過您的同意或依相關法律規定，復華投信不會將您的個人資料提供給第三人，或移作其他目的使用)
             </label>
             <div class="info clearfix bg-yellow">
-                <span class="red">※填寫完整資料，即有機會獲得限量開運紅包袋一份，本活動(活動期間)由NOWnews每周二抽出15位得獎者(共30份) ，並統一於12/23日前寄出。</span>
+                <span class="red">※填寫完整資料，即有機會獲得限量開運紅包袋一份，本活動將由NOWnews抽出50位得獎者，並統一於2017/1/6前郵寄，讓您雞年有福開運！</span>
             </div>
         </form>
         <div class="text-center">
@@ -246,11 +246,14 @@
             <img src="http://legacy.nownews.com/ad2004/161207-180458-0289p.png">
         </div>
         <div class="pull-left right-text" style="padding-top: 40px;">
-            <h2>您送出的資料已收到，祝您幸運中獎！</h2>
+            <!--<h2>您送出的資料已收到，祝您幸運中獎！</h2>-->
             <a target="_blank" href="http://www.fhtrust.com.tw/epaper/2016RSP_Hsiao/index.html?cid=16NNE">
                 <h3>看更多蕭老師投資撇步</h3>
-                <img style="position: relative;right: -250px;top: -50px;" src="http://legacy.nownews.com/ad2004/161207-180512-1017p.png">
             </a>
+            <a class="mui-btn mui-btn--danger" target="_blank" href="https://www.youtube.com/watch?v=H1N9n3cP_MY&list=PL0j2YgLgVIeFC3-5ZfduAGmYlMfaTGaU8&index=3">
+                看更多蕭老師投資秘笈
+            </a>
+            <img style="position: relative;right: -50px;top: -50px;" src="http://legacy.nownews.com/ad2004/161207-180512-1017p.png">
         </div>
     </div>
 </body>
@@ -272,9 +275,9 @@ $(function(){
                 data.questionB = $('input[name="qb"]:checked').val();
                 if (!data.questionA) return alert('請填Q1答案');
                 if (!data.questionB) return alert('請填Q2答案');
-                $('#ans').text('Ans:   排除人性干擾，停利不停扣才是正確的唷！');
-                if (data.qa == 2) {
-                    $('#ans').text('Ans:   恭喜你！你的定時定額投資觀念很正確唷！');
+                $('#ans').text('排除人性干擾，定時定額的成敗關鍵是「停利不停扣」!您猜對了嗎?');
+                if (data.questionA == 2) {
+                    $('#ans').text('恭喜你！你的定時定額投資觀念很正確唷！');
                 }
             }
             if (index === 4) {
